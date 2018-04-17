@@ -10,9 +10,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
 
-const HOST = '127.0.0.1'
-// const PORT = process.env.PORT && Number(process.env.PORT)
-const PORT = 8080
+const HOST = process.env.HOST
+const PORT = process.env.PORT && Number(process.env.PORT)
 
 const devWebpackConfig = merge(baseWebpackConfig, {
   module: {
