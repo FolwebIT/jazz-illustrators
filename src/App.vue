@@ -1,81 +1,96 @@
 <template>
   <v-app dark>
-
-    <hpanel />
-
-    <v-content class="">
+     <v-content class="">
+      <hpanel />
       <v-container dark fluid class="pa-0 ma-0">
         <router-view />
-      </v-container>
-    </v-content>
+        <v-footer height="auto" app dark class="" absolute>
+          <v-flex hidden-sm-and-down>
+            <v-card flat tile class="v-footer" width="100%">
+              <v-card-title class="white--text">
+                <strong class="subheading title" >Follow us on </strong>
+                <v-spacer></v-spacer>
+                <v-btn
+                  v-for="icon in icons"
+                  :key="icon"
+                  icon
+                  dark
+                  class="mx-3"
+                >
+                  <v-icon size="24px">{{ icon }}</v-icon>
+                </v-btn>
+              </v-card-title>
+              <v-divider></v-divider>
+              <v-card-text class="">
+                <v-layout>
+                  <v-flex
+                    text-lg-left text-xl-left text-md-left text-sm-left text-xs-left
+                    v-for="(col, i) in rows"
+                    :key="i"
+                    xs3
+                    class="mr-3"
+                  >
+                    <span class="footerTitle body-2" v-text="col.title"></span>
 
-    <div id="app">
-  <!-- <v-app id="inspire"> -->
-    <v-footer height="auto"  dark>
-      <v-card flat tile class="v-footer" width="100%">
-        <v-card-title class="white--text">
-          <strong class="subheading title" >Follow us on </strong>
-          <v-spacer></v-spacer>
-          <v-btn
-            v-for="icon in icons"
-            :key="icon"
-            icon
-            dark
-            class="mx-3"
-          >
-            <v-icon size="24px">{{ icon }}</v-icon>
-          </v-btn>
-        </v-card-title>
-        <v-divider></v-divider>
-        <v-card-text class="">
-          <v-layout>
-            <v-flex
-              text-lg-left text-xl-left text-md-left text-sm-left text-xs-left
-              v-for="(col, i) in rows"
-              :key="i"
-              xs3
-              class="mr-3"
+                    <v-divider class="mb-2"></v-divider>
+                    <div
+                    class="footerchildren"
+                      v-for="(child, i) in col.children"
+                      :key="i"
+                    ><router-link class="childLink white--text" :to="{ name: '', params: {} }" v-text="child"></router-link>
+                  </div>
+                  </v-flex>
+                  <v-flex
+                    xs3
+                    text-lg-left text-xl-left text-md-left text-sm-left text-xs-left>
+                    <span class="footerTitle body-2">Contact Us</span>
+                    <v-divider class="s"></v-divider>
+                    <div>
+                      <v-icon size="18px" class="mr-3">fas fa-home</v-icon>
+                      No 70 Abidjan Street, Wuse zone 3. Abuja
+                    </div>
+                    <div>
+                      <v-icon size="18px" class="mr-3">fas fa-envelope</v-icon>
+                       jazzillustrators@gmail.com
+                    </div>
+                    <div>
+                      <v-icon size="18px" class="mr-3">fas fa-envelope</v-icon>
+                       jazzillustrators@yahoo.com
+                    </div>
+                    <div>
+                      <v-icon size="18px" class="mr-3">fas fa-phone</v-icon>
+                      +234-703-3599-254
+                    </div>
+                    <!-- <div>
+                      <v-icon size="18px" class="mr-3">fas fa-print</v-icon>
+                      + 01 234 567 89
+                    </div> -->
+                  </v-flex>
+                </v-layout>
+              </v-card-text>
+            <v-card-actions class="grey justify-center">
+              &copy;2018 — <strong>FolwebIT</strong>
+            </v-card-actions>
+          </v-card>
+        </v-flex>
+        <v-flex hidden-md-and-up>
+          <v-layout row wrap justify-center>
+            <v-btn
+              v-for="link in links"
+              :key="link"
+              color="white"
+              flat
             >
-              <span class="body-2" v-text="col.title"></span>
-
-              <v-divider class="mb-2"></v-divider>
-              <div
-                v-for="(child, i) in col.children"
-                :key="i"
-                v-text="child"
-              ></div>
-            </v-flex>
-            <v-flex
-              xs3
-              text-lg-left text-xl-left text-md-left text-sm-left text-xs-left>
-              <span class="body-2">Contact</span>
-              <v-divider class="s"></v-divider>
-              <div>
-                <v-icon size="18px" class="mr-3">fas fa-home</v-icon>
-                New York, NY 10012, US
-              </div>
-              <div>
-                <v-icon size="18px" class="mr-3">fas fa-envelope</v-icon>
-                info@example.com
-              </div>
-              <div>
-                <v-icon size="18px" class="mr-3">fas fa-phone</v-icon>
-                + 01 234 567 88
-              </div>
-              <div>
-                <v-icon size="18px" class="mr-3">fas fa-print</v-icon>
-                + 01 234 567 89
-              </div>
+              {{ link }}
+            </v-btn>
+            <v-flex xs12 py-3 text-xs-center white--text>
+              &copy;2018 — <strong>FolwebIT</strong>
             </v-flex>
           </v-layout>
-        </v-card-text>
-        <v-card-actions class="grey justify-center">
-          &copy;2018 — <strong>FolwebIT</strong>
-        </v-card-actions>
-      </v-card>
-    </v-footer>
-  <!-- </v-app> -->
-</div>
+        </v-flex>
+      </v-footer>
+      </v-container>
+    </v-content>
   </v-app>
 </template>
 
@@ -84,16 +99,16 @@
 export default {
   name: 'App',
   data: () => ({
+    links: ['Home', 'About Us', 'Team', 'Services', 'Blog', 'Contact Us'],
     icons: ['fab fa-facebook', 'fab fa-twitter', 'fab fa-google-plus', 'fab fa-linkedin', 'fab fa-instagram'],
     rows: [
       {
-        title: 'Jazz Illustrators',
-        children: ['We are poised for promoting African native music and cultural ' +
-        'values with the blend of foreign jazz music, however making the African native music recognized all over the world.']
+        title: 'Our Vision',
+        children: ['Our vision is to encourage recognition and general acceptability of African Jazz music at par with all other kinds of music in the Nigerian Entertainment Industry where a substantial number of Nigerians, Africans and entire world embraces Jazz Music like every other kinds of music. ']
       },
       {
         title: 'Past Events',
-        children: ['The Gospel Jazz Explosion (G.O.J.E)', 'CANDLE LIGHT SYMPHONY', 'JAZZ SERENATA', 'Bootstrap Angular']
+        children: ['The Gospel Jazz Explosion (G.O.J.E)', 'CANDLE LIGHT SYMPHONY', 'JAZZ SERENATA']
       },
       {
         title: 'Youtube Videos',
@@ -124,7 +139,7 @@ export default {
   text-decoration: none;
 }
 .v-footer span{
-  color: red;
+  color: #ffffb3;
   font-size: 20px !important;
   font-family: '', cursive;
   text-decoration: none !important;
@@ -135,5 +150,43 @@ export default {
   font-weight: bold;
   font-size: 30px !important;
   font-family: 'Great Vibes';
+}
+.footerTitle {
+  font-weight: bold;
+  font-style: oblique;
+}
+.footerchildren {
+  font-size: 12px;
+
+}
+.childLink {
+  text-decoration: none !important;
+}
+.footer {
+  width: 100% !important;
+  margin: auto !important;
+}
+.homeHead {
+  /* border: 1px solid #000; */
+  /* max-width: 100% !important; */
+  width: 80%;
+
+  margin: auto !important;
+  font-family: 'Great Vibes', cursive;
+  color: #ffffb3;
+  text-align: center !important;
+}
+.homeMsg {
+  /* border: 1px solid #000; */
+  margin: auto !important;
+  text-align: justify !important;
+}
+.banner {
+  width: 95% !important;
+  margin: auto;
+  margin-top: 10px;
+}
+.homeHead {
+  color: #ffffb3
 }
 </style>

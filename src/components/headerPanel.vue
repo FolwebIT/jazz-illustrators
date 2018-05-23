@@ -3,7 +3,7 @@
     <v-toolbar fixed dark class="header">
       <v-toolbar-side-icon class="hidden-md-and-up" @click="toggleDrawer"> </v-toolbar-side-icon>
       <v-avatar size="63px" class="hidden-sm-and-down" >
-        <img src="../assets/logo_black.jpg">
+        <img src="../assets/logo_white.jpg">
       </v-avatar>
       <v-toolbar-title class="barTitle" fixed>
         <router-link to="/" class="home headerLink">
@@ -13,22 +13,13 @@
         </router-link>
       </v-toolbar-title>
 
-      <!-- <v-toolbar-items>
-        <v-btn
-          flat
-          dark
-          class="headerLink">-
-          Browse
-        </v-btn>
-      </v-toolbar-items> -->
-
       <v-spacer></v-spacer>
 
       <v-toolbar-items class="hidden-sm-and-down m-auto">
         <v-btn
           flat
           dark
-          to="#"
+          to="/"
           class="headerLink">
           Home
         </v-btn>
@@ -36,6 +27,7 @@
         <v-btn
           flat
           dark
+          to="/events"
           class="headerLink">
           Events
         </v-btn>
@@ -43,6 +35,15 @@
         <v-btn
           flat
           dark
+          to="/products"
+          class="headerLink">
+          Products
+        </v-btn>
+
+        <v-btn
+          flat
+          dark
+          to="/about"
           class="headerLink">
           About Us
         </v-btn>
@@ -50,6 +51,7 @@
         <v-btn
           flat
           dark
+          to="/contact"
           class="headerLink">
           Contact
         </v-btn>
@@ -74,15 +76,15 @@
        </v-list>
        <v-list class="pt-0" >
          <v-divider></v-divider>
-         <v-list-tile v-for="item in items" :key="item.title">
+         <v-list-tile v-for="link in NavLinks" :key="link.title">
            <!-- <v-list-tile-action>
              <v-icon>{{ item.icon }}</v-icon>
            </v-list-tile-action> -->
            <v-list-tile-content>
              <v-list-tile-title class="ml-3">
-               <router-link :to="item.href" class="headerLink">
+               <router-link :to="link.href" class="headerLink">
                  <span>
-                   {{item.title}}
+                   {{link.title}}
                  </span>
                </router-link>
              </v-list-tile-title>
@@ -99,11 +101,12 @@ export default {
     return {
       drawer: null,
       drawerWasClosed: false,
-      items: [
-        { title: 'Home', icon: 'dashboard', href: '/#' },
-        { title: 'Events', icon: 'dashboard', href: '/#' },
-        { title: 'About', icon: 'dashboard', href: '/#' },
-        { title: 'Contact', icon: 'question_answer', href: '/#' }
+      NavLinks: [
+        { title: 'Home', icon: '', href: '/' },
+        { title: 'Events', icon: '', href: '/events' },
+        { title: 'Products', icon: '', href: '/products' },
+        { title: 'About', icon: '', href: '/about' },
+        { title: 'Contact', icon: '', href: '/contact' }
       ]
     }
   },
@@ -145,7 +148,7 @@ export default {
 }
 .home {
   font-family: 'Permanent Marker', cursive !important;
-  color: #ffffff !important;
+  color: #ffffb3 !important;
 }
 
 .barTitle {

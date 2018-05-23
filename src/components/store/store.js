@@ -16,7 +16,7 @@ export default new Vuex.Store({
       } else {
         state.ScreenSize = false
       }
-    },
+    }
   },
   actions: {
     setScreenSize ({commit}, ScreenSize) {
