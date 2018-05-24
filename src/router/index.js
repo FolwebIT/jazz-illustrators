@@ -6,6 +6,8 @@ import about from '@/components/about'
 import products from '@/components/products'
 import contact from '@/components/contact'
 import events from '@/components/events'
+import services from '@/components/services'
+import videos from '@/components/videos'
 
 Vue.use(Router)
 
@@ -41,6 +43,16 @@ export default new Router({
       path: '/events',
       name: 'events',
       component: events
+    },
+    {
+      path: '/services',
+      name: 'services',
+      component: services
+    },
+    {
+      path: '/videos',
+      name: 'videos',
+      component: videos
     }
   ]
 })

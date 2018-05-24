@@ -5,7 +5,7 @@
       <v-avatar size="63px" class="hidden-sm-and-down" >
         <img src="../assets/logo_white.jpg">
       </v-avatar>
-      <v-toolbar-title class="barTitle" fixed>
+      <v-toolbar-title class="barTitle mt-2" fixed>
         <router-link to="/" class="home headerLink">
           <span>
             Jazz Illustrators
@@ -35,9 +35,23 @@
         <v-btn
           flat
           dark
+          to="/services"
+          class="headerLink">
+          Services
+        </v-btn>
+        <v-btn
+          flat
+          dark
           to="/products"
           class="headerLink">
           Products
+        </v-btn>
+        <v-btn
+          flat
+          dark
+          to="/videos"
+          class="headerLink">
+          Videos
         </v-btn>
 
         <v-btn
@@ -104,9 +118,11 @@ export default {
       NavLinks: [
         { title: 'Home', icon: '', href: '/' },
         { title: 'Events', icon: '', href: '/events' },
+        { title: 'Services', icon: '', href: '/services' },
         { title: 'Products', icon: '', href: '/products' },
-        { title: 'About', icon: '', href: '/about' },
-        { title: 'Contact', icon: '', href: '/contact' }
+        { title: 'About Us', icon: '', href: '/about' },
+        { title: 'Contact Us', icon: '', href: '/contact' },
+        { title: 'Videos', icon: '', href: '/contact' }
       ]
     }
   },
@@ -147,17 +163,20 @@ export default {
   color: #ffffb3 !important;
 }
 .home {
-  font-family: 'Permanent Marker', cursive !important;
-  color: #ffffb3 !important;
+  margin-top: 20px !important;
+  font-family: 'Merriweather', sans-serif;
+  font-weight: 800 !important;
+  color: #DC143C !important;
 }
 
 .barTitle {
-  font-family: 'Great Vibes', cursive !important;
+  /* font-family: 'Great Vibes', cursive !important; */
   font-weight: bold;
-  font-size: 28px;
+  font-size: 30px;
   color: #ffffff;
-  margin: ;
-  height: 55px;
+  font-weight: 800 !important;
+
+  /* height: 55px; */
 }
 .listTitle {
   height: 75px;

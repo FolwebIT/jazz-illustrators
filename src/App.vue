@@ -37,7 +37,7 @@
                     class="footerchildren"
                       v-for="(child, i) in col.children"
                       :key="i"
-                    ><router-link class="childLink white--text" :to="{ name: '', params: {} }" v-text="child"></router-link>
+                    ><router-link class="childLink white--text" :to="col.href" v-text="child"></router-link>
                   </div>
                   </v-flex>
                   <v-flex
@@ -80,8 +80,9 @@
               :key="link"
               color="white"
               flat
+              :to="link.href"
             >
-              {{ link }}
+              {{ link.title }}
             </v-btn>
             <v-flex xs12 py-3 text-xs-center white--text>
               &copy;2018 — <strong>FolwebIT</strong>
@@ -99,19 +100,38 @@
 export default {
   name: 'App',
   data: () => ({
-    links: ['Home', 'About Us', 'Team', 'Services', 'Blog', 'Contact Us'],
+    links: [
+      {
+        title: 'Home', href: '/'
+      },
+      {
+        title: 'About Us', href: '/about'
+      },
+      {
+        title: 'Team', href: '/team'
+      },
+      {
+        title: 'Services', href: '/services'
+      },
+      {
+        title: 'Contact Us', href: '/contact'
+      }
+    ],
     icons: ['fab fa-facebook', 'fab fa-twitter', 'fab fa-google-plus', 'fab fa-linkedin', 'fab fa-instagram'],
     rows: [
       {
         title: 'Our Vision',
+        href: '/about',
         children: ['Our vision is to encourage recognition and general acceptability of African Jazz music at par with all other kinds of music in the Nigerian Entertainment Industry where a substantial number of Nigerians, Africans and entire world embraces Jazz Music like every other kinds of music. ']
       },
       {
         title: 'Past Events',
+        href: '/events',
         children: ['The Gospel Jazz Explosion (G.O.J.E)', 'CANDLE LIGHT SYMPHONY', 'JAZZ SERENATA']
       },
       {
         title: 'Youtube Videos',
+        href: '/videos',
         children: ['video1', 'video1', 'video1', 'video1']
       }
     ]

@@ -50,8 +50,8 @@
         </div>
       </v-flex>
     </v-layout>
-    <v-layout row wrap class="mt-3 mb-3">
-      <v-flex  class="cardFlex mr-2 ml-2 hidden-sm-and-down">
+    <v-layout row wrap class="mt-3 mb-3 ml-5 mr-5 5vents">
+      <v-flex  class=" cardFlex mr-2 ml-2 hidden-sm-and-down">
         <v-card class="cards">
           <!-- <h1>GOJE 2013</h1> -->
           <v-card-media
@@ -77,7 +77,7 @@
           </v-card-actions>
         </v-card>
       </v-flex>
-      <v-flex  class="cardFlex mr-2 ml-2 hidden-sm-and-down">
+      <v-flex  class=" cardFlex mr-2 ml-2 hidden-sm-and-down">
         <v-card class="cards">
           <!-- <h1>GOJE 2017</h1> -->
           <v-card-media
@@ -104,7 +104,7 @@
           </v-card-actions>
         </v-card>
       </v-flex>
-      <v-flex  class="cardFlex mr-2 ml-2 hidden-sm-and-down">
+      <v-flex  class=" cardFlex mr-2 ml-2 hidden-sm-and-down">
         <v-card class="cards">
           <!-- <h1>GOJE 2017</h1> -->
           <v-card-media
@@ -218,6 +218,10 @@ export default {
   border-style:ridge;
 }
 .cardFlex {
-  width: 27% !important;
+  width: 200PX !important;
+  /* margin: 0 auto; */
+}
+.events {
+
 }
 </style>

@@ -17,8 +17,8 @@
         an event, we normally come up with a new thing and new ideas.
       </p>
       <ul>
-        <li class="ml-5">
-          <h1 class="display-1">Jazz Serenata</h1> <br>
+        <li class="ml-3">
+          <span class="listhead">Jazz Serenata</span> <br>
           <p>
             This is a quarterly event organized by the Jazz illustrators purposely
             to satisfy the consistent quest for excellent Jazz music by our fans.<br>
@@ -26,8 +26,8 @@
             media platforms.
           </p>
         </li>
-        <li class="ml-5">
-          <h1 class="display-1">ABUJA JAZZ AND CULTURAL EXHIBITION (A.J.A.C.E)</h1> <br>
+        <li class="ml-3">
+          <span class="listhead">ABUJA JAZZ AND CULTURAL EXHIBITION (A.J.A.C.E)</span> <br>
           <p>
             <a class="white--text" href="/products">read more about (A.J.A.C.E) on our products page</a>
           </p>
@@ -45,8 +45,8 @@
         Industry. Few among them include:
       </p>
       <ul>
-        <li class="ml-5">
-          <h1 class="display-1">The Gospel Jazz Explosion (G.O.J.E) </h1> <br>
+        <li class="ml-3">
+          <span class="listhead">The Gospel Jazz Explosion (G.O.J.E) </span> <br>
           <p>
             which was an historic event that took creativity into another level
             by inventing the idea of live Jazz performance alongside with stage
@@ -56,8 +56,8 @@
             Abraham Komolafe, Israel Eliagwu, Enenche Enenche and lots more
           </p>
         </li>
-        <li class="ml-5">
-          <h1 class="display-1">Candle Light Symphony</h1> <br>
+        <li class="ml-3">
+          <span class="listhead">Candle Light Symphony</span> <br>
           <p>
             Candle light Symphony is an annual Jazz event for the Christmas season.
             The first edition was a Jazz concert held on the 12th Dec, 2015 to
@@ -67,8 +67,8 @@
             Roof Top Lounge, Wuse 2, Abuja
           </p>
         </li>
-        <li class="ml-5">
-          <h1 class="display-1">Jazz Serenata</h1> <br>
+        <li class="ml-3">
+          <span class="listhead">Jazz Serenata</span> <br>
           <p>
             The Jazz Serenata is a quarterly fusion Jazz event by the Jazz Illustrators
             to cheer the Jazz lovers in the Federal Capital Territory of Nigeria and
@@ -91,5 +91,17 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
+.listhead {
+  font-size: 16px;
+  font-style: oblique;
+  font-weight: 800;
+  margin-bottom: 3px !important;
+  /* font-family: 'Great Vibes'; */
+  color: #ffffb3;
+}
+ul li {
+  /* border: 1px solid #000; */
+  list-style:  none;
+}
 </style>

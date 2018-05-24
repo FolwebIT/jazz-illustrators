@@ -6,9 +6,10 @@ import router from './router'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import PageHeader from '@/components/headerPanel.vue'
+import VueYouTubeEmbed from 'vue-youtube-embed'
 
 Vue.use(Vuetify)
-
+Vue.use(VueYouTubeEmbed)
 Vue.config.productionTip = false
 Vue.component('hpanel', PageHeader)
 /* eslint-disable no-new */
