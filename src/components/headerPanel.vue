@@ -53,6 +53,13 @@
           class="headerLink">
           Videos
         </v-btn>
+        <v-btn
+          flat
+          dark
+          to="/profile"
+          class="headerLink">
+          Teams
+        </v-btn>
 
         <v-btn
           flat
@@ -122,7 +129,8 @@ export default {
         { title: 'Products', icon: '', href: '/products' },
         { title: 'About Us', icon: '', href: '/about' },
         { title: 'Contact Us', icon: '', href: '/contact' },
-        { title: 'Videos', icon: '', href: '/contact' }
+        { title: 'Videos', icon: '', href: '/videos' },
+        { title: 'Team', icon: '', href: '/profiles' }
       ]
     }
   },

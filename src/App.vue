@@ -10,15 +10,19 @@
               <v-card-title class="white--text">
                 <strong class="subheading title" >Follow us on </strong>
                 <v-spacer></v-spacer>
-                <v-btn
-                  v-for="icon in icons"
-                  :key="icon"
-                  icon
-                  dark
-                  class="mx-3"
-                >
-                  <v-icon size="24px">{{ icon }}</v-icon>
-                </v-btn>
+
+                  <v-btn
+                    v-for="icon in icons"
+                    :key="icon"
+                    target="_blank"
+                    :href="icon.href"
+                    icon
+                    dark
+                    replace
+                    class="mx-3"
+                  >
+                    <v-icon size="24px">{{ icon.icon }}</v-icon>
+                  </v-btn>
               </v-card-title>
               <v-divider></v-divider>
               <v-card-text class="">
@@ -117,7 +121,23 @@ export default {
         title: 'Contact Us', href: '/contact'
       }
     ],
-    icons: ['fab fa-facebook', 'fab fa-twitter', 'fab fa-google-plus', 'fab fa-linkedin', 'fab fa-instagram'],
+    icons: [
+      {
+        icon: 'fab fa-facebook', href: 'http://www.facebook.com/jazz.illustrators'
+      },
+      {
+        icon: 'fab fa-instagram', href: 'http://www.instagram.com/officialjazzillustrators/'
+      },
+      {
+        icon: 'fab fa-twitter', href: ''
+      },
+      {
+        icon: 'fab fa-google-plus', href: ''
+      },
+      {
+        icon: 'fab fa-linkedin', href: ''
+      }
+    ],
     rows: [
       {
         title: 'Our Vision',
@@ -132,7 +152,7 @@ export default {
       {
         title: 'Youtube Videos',
         href: '/videos',
-        children: ['video1', 'video1', 'video1', 'video1']
+        children: ['Synergy', 'Amazing', 'Thank You', 'Wine Light']
       }
     ]
   })
