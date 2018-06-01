@@ -1,7 +1,7 @@
 <template lang="html">
   <v-layout row wrap>
     <v-flex class="" hidden-sm-and-down>
-      <v-carousel :interval="8000" class="carousel mb-3 mt-3" hidden-sm-and-down>
+      <v-carousel  class="carousel mb-3 mt-3">
         <v-carousel-item v-for="(item,i) in items" :src="item.src" :key="i" size="100px"></v-carousel-item>
       </v-carousel>
     </v-flex>
