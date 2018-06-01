@@ -1,16 +1,23 @@
 <template lang="html">
-  <v-layout row wrap pa-3>
-    <v-flex >
-      <h1 class="white--text">over the years, we have uploaded most of our live event videos to youtube..... </h1>
-    </v-flex>
-    <v-flex
-      class="videos"
+  <div class="mt-3">
+    <v-layout row wrap>
+      <!-- <v-flex mt-3>
+        <p class="white--text">over the years, we have uploaded most of our live event videos to youtube..... </p>
 
-      v-for="(video, i) in videos"
-      :key="i">
-      <you-tube :url="video.url" :youtubeId="video.id" :title="video.title"/>
-    </v-flex>
-  </v-layout>
+      </v-flex> -->
+    </v-layout>
+    <v-layout row wrap>
+
+      <!-- <div class="holder"> -->
+        <v-flex xs4
+          class="videos"
+          v-for="(video, i) in videos"
+          :key="i">
+          <you-tube :url="video.url" :youtubeId="video.id" :title="video.title"/>
+        </v-flex>
+      <!-- </div> -->
+    </v-layout>
+  </div>
 </template>
 
 <script>
@@ -76,9 +83,16 @@ export default {
 <style lang="css" scoped>
 .videos {
   width: 400px;
-  height: 350px;
-  margin: auto;
+  height: 380px;
+  display: inline-block;
+  margin-right: 25px;
+  margin:   auto;
   margin-top: 15px;
   /* border: 1px solid #000 !important; */
 }
+/* .holder {
+  width: 100%;
+  margin: auto;
+  border: 1px solid red;
+} */
 </style>

@@ -4,7 +4,7 @@
       <youtube
         :video-id="youtubeId"
         :player-width="300"
-        :player-height="331">
+        :player-height="300">
       </youtube>
       <a target="_blank" :href="url" class="Vtitle white--text">{{ title }}</a>
       <!-- <router-link :to="{ name: '', params: {} }"></router-link> -->

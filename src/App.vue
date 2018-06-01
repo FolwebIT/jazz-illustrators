@@ -129,10 +129,10 @@ export default {
         icon: 'fab fa-instagram', href: 'http://www.instagram.com/officialjazzillustrators/'
       },
       {
-        icon: 'fab fa-twitter', href: ''
+        icon: 'fab fa-youtube', href: 'https://www.youtube.com/channel/UCBThmc8apAh0n93N5YhvAAg/featured'
       },
       {
-        icon: 'fab fa-google-plus', href: ''
+        icon: 'fab fa-twitter', href: ''
       },
       {
         icon: 'fab fa-linkedin', href: ''
@@ -228,5 +228,23 @@ export default {
 }
 .homeHead {
   color: #ffffb3
+}
+.listhead {
+  font-size: 16px;
+  font-style: oblique;
+  font-weight: 800;
+  margin-bottom: 3px !important;
+  /* font-family: 'Great Vibes'; */
+  color: #ffffb3;
+}
+ul li {
+  /* border: 1px solid #000; */
+  list-style:  none;
+}
+.banner {
+  margin: 0 auto;
+  border-radius: 10px;
+  width: 90% !important;
+  height: 450px !important;
 }
 </style>

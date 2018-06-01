@@ -1,7 +1,7 @@
 <template lang="html">
   <v-layout row wrap>
-    <v-flex class="carousel mb-3" hidden-sm-and-down>
-      <v-carousel hide-controls class="" hide-delimiters>
+    <v-flex class="" hidden-sm-and-down>
+      <v-carousel :interval="8000" class="carousel mb-3 mt-3" hidden-sm-and-down>
         <v-carousel-item v-for="(item,i) in items" :src="item.src" :key="i" size="100px"></v-carousel-item>
       </v-carousel>
     </v-flex>
@@ -50,7 +50,7 @@
         </div>
       </v-flex>
     </v-layout>
-    <v-layout row wrap class="mt-3 mb-3 ml-5 mr-5 5vents">
+    <v-layout row wrap class="mt-3 mb-3 ml-5 mr-5">
       <v-flex  class=" cardFlex mr-2 ml-2 hidden-sm-and-down">
         <v-card class="cards">
           <!-- <h1>GOJE 2013</h1> -->
@@ -61,12 +61,12 @@
 
           <v-card-title primary-title>
             <v-flex text-lg-center text-md-center text-sm-center text-xl-center text-xs-center>
-              <h3 class="headline mb-0">Candle Light Symphony</h3>
+              <h3 class="headline mb-1">Candle Light Symphony</h3>
               <div class="cardtext">
-                <p>which was an historic event that took creativity into another
-                  level by inventing the idea of live Jazz performance alongside
-                  with stage acting on the same platform. It is an annual Jazz
-                  event now in the month of November.
+                <p>Candle light Symphony is an annual Jazz event for the Christmas season.
+                The first edition was a Jazz concert held on the 12th Dec, 2015 to
+                commemorate the felicity of the Yuletide season with live performance of
+                excellent Christmas songs by the Jazz Illustrators.
                 </p>
               </div>
             </v-flex>
@@ -88,7 +88,7 @@
 
           <v-card-title primary-title>
             <v-flex text-lg-center text-md-center text-sm-center text-xl-center text-xs-center>
-              <h3 class="headline mb-0">GOJE 2016</h3>
+              <h3 class="headline mb-1">GOJE 2016</h3>
               <div class="cardtext">
                 <p>which was an historic event that took creativity into another
                   level by inventing the idea of live Jazz performance alongside
@@ -114,12 +114,12 @@
 
           <v-card-title primary-title>
             <v-flex text-lg-center text-md-center text-sm-center text-xl-center text-xs-center>
-              <h3 class="headline mb-0">Jazz Serenata</h3>
+              <h3 class="headline mb-1">Jazz Serenata</h3>
               <div class="cardtext">
-                <p>which was an historic event that took creativity into another
-                  level by inventing the idea of live Jazz performance alongside
-                  with stage acting on the same platform. It is an annual Jazz
-                  event now in the month of November.
+                <p>The Jazz Serenata is a quarterly fusion Jazz event by the Jazz Illustrators
+                to cheer the Jazz lovers in the Federal Capital Territory of Nigeria and
+                beyond. The first edition came up on the 15th May, 2013 and our audience
+                could but quest for more.
                 </p>
               </div>
             </v-flex>
@@ -138,7 +138,7 @@
 import pic2 from '../assets/logo_white.jpg'
 import pic3 from '../assets/edit2.jpg'
 import pic4 from '../assets/edit.jpg'
-import pic5 from '../assets/lion1.jpeg'
+import pic5 from '../assets/edit1.jpg'
 import pic6 from '../assets/stage.jpg'
 import mobile from '../assets/mobile.jpg'
 import mobile1 from '../assets/mobile1.jpeg'
@@ -192,8 +192,10 @@ export default {
 
 <style lang="css">
 .carousel {
-  width: 95% !important;
+  width: 90% !important;
+  height: 450px !important;
   margin: auto;
+  border-radius: 15px
   /* margin-top: 10px; */
 }
 .homeHead {
@@ -210,10 +212,8 @@ export default {
   margin: 0 auto !important;
 }
 .cards {
-  /* margin: 0 auto; */
-  /* width: 30%; */
-  /* display: inline-flex; */
-  border: 4px solid #ffffb3;
+
+  /* border: 4px solid #ffffb3; */
   border-radius: 10px;
   border-style:ridge;
 }
@@ -221,7 +221,8 @@ export default {
   width: 200PX !important;
   /* margin: 0 auto; */
 }
-.events {
-
+.cardtext {
+  text-align: justify;
+  /* border: 1px solid #000; */
 }
 </style>

@@ -1,7 +1,7 @@
 <template lang="html">
-  <div colum wrap class="mt-3">
-    <v-flex class="banner mb-4" hidden-sm-and-down>
-      <img :src="require('../assets/stage.jpg')" alt="">
+  <div colum wrap class="">
+    <v-flex class="mb-4 mt-3" hidden-sm-and-down>
+      <img :src="require('../assets/profile.jpg')" alt="" class="banner">
     </v-flex>
     <v-layout row wrap>
       <v-flex class="banner mb-4" hidden-md-and-up>
@@ -52,6 +52,20 @@
     </v-layout>
     <v-layout wrap>
       <v-flex xs12 >
+        <h3  class="display-2 homeHead">Nature of Music</h3>
+      </v-flex>
+      <v-flex xs10 class="homeMsg pa-4 white--text">
+        <p>
+          The nature of Jazz Illustrators music is not limited to only Jazz music
+          but also to other genre of music including; highlife, Naija Pop, blues
+          and oldies, sals and latin music.<br>
+
+          In Jass Illustrators,we spice up our musics with a blend of african feels and
+          we can proudly say we don’t sound like anyone or any band
+        </p>
+      </v-flex>
+
+      <v-flex xs12 >
         <h3  class="display-2 homeHead">Our History</h3>
       </v-flex>
       <v-flex xs10 class="homeMsg pa-4 white--text">
@@ -94,6 +108,6 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
 
 </style>

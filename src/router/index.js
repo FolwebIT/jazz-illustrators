@@ -8,6 +8,7 @@ import contact from '@/components/contact'
 import events from '@/components/events'
 import services from '@/components/services'
 import videos from '@/components/videos'
+import team from '@/components/team'
 
 Vue.use(Router)
 
@@ -53,6 +54,11 @@ export default new Router({
       path: '/videos',
       name: 'videos',
       component: videos
+    },
+    {
+      path: '/profile',
+      name: 'team',
+      component: team
     }
   ]
 })

@@ -1,10 +1,10 @@
 <template lang="html">
   <v-layout row wrap>
-    <v-flex class="banner mb-4" hidden-sm-and-down>
-      <img :src="require('../assets/stage.jpg')" alt="">
+    <v-flex class="mb-4 mt-3" hidden-sm-and-down>
+      <img :src="require('../assets/logo_white.jpg')" alt="" class="banner">
     </v-flex>
     <v-flex class="banner mb-4" hidden-md-and-up>
-      <img :src="require('../assets/mobileStage.jpg')" alt="">
+      <img :src="require('../assets/logo_white.jpg')" alt="">
     </v-flex>
     <v-flex xs12>
       <h3  class="display-2 homeHead">Contact Us</h3>

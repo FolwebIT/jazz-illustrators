@@ -19,7 +19,7 @@
         <v-btn
           flat
           dark
-          to="/"
+          :to="{path: '/'}"
           class="headerLink">
           Home
         </v-btn>
@@ -58,7 +58,7 @@
           dark
           to="/profile"
           class="headerLink">
-          Teams
+          Team
         </v-btn>
 
         <v-btn
@@ -83,7 +83,6 @@
       temporary
       v-model="drawer"
       absolute
-      hide-overlay
      >
        <v-list class="pa-0">
          <v-list-tile avatar class="listTitle pa-0">
@@ -130,7 +129,7 @@ export default {
         { title: 'About Us', icon: '', href: '/about' },
         { title: 'Contact Us', icon: '', href: '/contact' },
         { title: 'Videos', icon: '', href: '/videos' },
-        { title: 'Team', icon: '', href: '/profiles' }
+        { title: 'Team', icon: '', href: '/profile' }
       ]
     }
   },
